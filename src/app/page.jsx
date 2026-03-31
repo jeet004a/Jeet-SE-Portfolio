@@ -5,7 +5,7 @@ import Image from "next/image";
 // import Navbar from "@/components/navbar/Navbar";
 // import Hero from "@/components/Hero/Hero";
 // import Footer from "@/components/footer/Footer";
-import Main from "@/pages/Main Page/Main";
+import Main from "@/components/Main Page/Main";
 import styles from './page.module.css'
 import Link from "next/link";
 export default function Home({ Component, pageProps }) {

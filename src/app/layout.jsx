@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
+// import { ThemeProvider } from "@/context/ThemeContext";
+import Providers from "./providers";
 import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,24 +23,25 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
-        <Script src="https://unpkg.com/sheryjs/dist/Shery.js" strategy="afterInteractive" />
 
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-          strategy="afterInteractive"
-        />
-
-        <Script
-          src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"
-          strategy="afterInteractive"
-        />
-        <ThemeProvider>
+        <Providers>
           <div className="container">
 
             {children}
+            <Script src="https://unpkg.com/sheryjs/dist/Shery.js" strategy="afterInteractive" />
+
+            <Script
+              src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+              strategy="afterInteractive"
+            />
+
+            <Script
+              src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"
+              strategy="afterInteractive"
+            />
 
           </div>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
