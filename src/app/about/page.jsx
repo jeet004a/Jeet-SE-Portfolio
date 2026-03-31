@@ -81,7 +81,7 @@ const About = () => {
           <div className={styles.imageCard}>
             <Image
               src="https://media.licdn.com/dms/image/v2/D5603AQEJ9NB-w1YmXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730827543476?e=1771459200&v=beta&t=M3YDZ-muJmRPgByUeBlf8avGXJfTV2HUlYgLtCcqCjU"
-              alt="Jeet Wasti profile photo"
+              alt="Jeet Profile Image"
               width={400}
               height={500}
               priority

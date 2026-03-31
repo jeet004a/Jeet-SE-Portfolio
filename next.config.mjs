@@ -30,6 +30,9 @@ const nextConfig = {
         }, {
             protocol: 'https',
             hostname: "www.arcgis.com",
+        }, {
+            protocol: "https",
+            hostname: "drive.google.com",
         }],
     },
 };
