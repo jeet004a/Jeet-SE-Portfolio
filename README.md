@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jeet Wasti - Developer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website! This project is a showcase of my work, exploring modern web development and creative coding. It serves as my digital home where I share my projects, professional experience, and experimental visual interfaces.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+This portfolio is built with the following technologies to ensure high performance, SEO optimization, and immersive animations:
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Library:** [React](https://reactjs.org/)
+- **Animations:** [GSAP](https://gsap.com/) (GreenSock Animation Platform)
+- **WebGL Effects:** [Shery.js](https://sheryjs.com/) & [Three.js](https://threejs.org/)
+- **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- **Styling:** CSS Modules with dynamic theming support (Light/Dark mode)
+
+## 📁 Project Structure
+
+The project has various distinct sections accessible via the main navigation:
+
+- **`/` (Home):** Introduction and featured highlights.
+- **`/about`:** Detailed background about me and my journey.
+- **`/hire`:** Information for potential clients or employers.
+- **`/magic`:** An experimental visual playground leveraging Shery.js and WebGL for interactive, immersive imagery and gooey effects (optimized for desktop).
+- **`/uses`:** A curated list of my workstation gear, software, and development environment.
+- **`/blog`:** My technical blog (Currently under construction).
+
+## 🛠️ Getting Started
+
+First, ensure you have Node.js installed, then clone the repository and install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The application is set up with hot-reloading for a seamless development experience.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Dark/Light Mode:** Full theming support via Context API.
+- **Smooth Animations:** Integrated page transitions and micro-interactions powered by GSAP.
+- **Experimental Effects:** Custom WebGL-based effects running on a fixed canvas system to push the boundaries of UI/UX.
 
-## Learn More
+## 📝 License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open for inspiration but customized for my personal brand. Feel free to explore the code!
