@@ -59,7 +59,7 @@ const Navbar = () => {
                     <Link href="/" aria-label="Home">
                         <Image
                             src="https://avatars.githubusercontent.com/u/60826412?v=4&size=64"
-                            alt="Profile photo"
+                            alt="Jeet Wasti Profile photo"
                             width={36}
                             height={36}
                             priority

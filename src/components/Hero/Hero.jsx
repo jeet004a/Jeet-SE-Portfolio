@@ -12,8 +12,8 @@ const Hero = () => {
 
             <section className={styles.wrapper}>
                 <Image
-                    src="https://media.licdn.com/dms/image/v2/D5603AQEJ9NB-w1YmXw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730827543476?e=1771459200&v=beta&t=M3YDZ-muJmRPgByUeBlf8avGXJfTV2HUlYgLtCcqCjU"
-                    alt="Vikrant Bhat profile photo"
+                    src="https://media.licdn.com/dms/image/v2/D5603AQEJ9NB-w1YmXw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730827543441?e=1776297600&v=beta&t=KTXY73_gRe772kCR1yX6tgR0hS-ehKq6S-FQc3NPeBg"
+                    alt="Jeet Wasti profile photo"
                     width={64}
                     height={64}
                     priority
