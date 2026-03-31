@@ -94,9 +94,10 @@ html {
     pointer-events: none;
 }
 
+
 @font-face {
     font-family: "kajiro";
-    src: url("/fonts/Kajiro.ttf") format("truetype");
+    src: url("/fonts/Kajiro-Bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
