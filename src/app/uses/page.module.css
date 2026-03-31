@@ -1,0 +1,336 @@
+/* =========================
+   Main Container
+========================= */
+
+.mainContainer {
+    min-height: 40vh;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+
+    padding: clamp(60px, 8vw, 120px) clamp(16px, 5vw, 40px);
+}
+
+
+/* =========================
+   Header Section
+========================= */
+
+.header {
+    max-width: 720px;
+
+    margin-left: clamp(0px, 22vw, 420px);
+    margin-right: auto;
+    margin-top: clamp(20px, 6vh, 80px);
+
+    padding: 40px 0;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.headerTitle {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   Description
+========================= */
+
+.headerDescription {
+    margin-top: 24px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #8c8c96;
+}
+
+
+/* =========================
+   Workstation Section
+========================= */
+
+.workstationSection {
+
+    max-width: 720px;
+
+    margin-left: clamp(0px, 22vw, 420px);
+    margin-right: auto;
+    /* margin-top: -2.3rem; */
+    border-left: 1px solid #232325;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding-left: 32px;
+}
+
+/* :global(.theme.dark) .workstationSection::before {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+} */
+
+
+/* =========================
+   Grid Layout
+========================= */
+
+.workstationGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+
+    .workstationGrid {
+        grid-template-columns: 140px 1fr;
+    }
+
+    .workstationContent {
+        grid-column: 2;
+    }
+}
+
+
+/* =========================
+   Section Title
+========================= */
+
+.workstationTitle {
+    font-size: 14px;
+    font-weight: 600;
+    /* color: #F4F4F5 */
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   List
+========================= */
+
+.workstationList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* =========================
+   Item
+========================= */
+
+.workstationItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+}
+
+
+/* =========================
+   Item Header
+========================= */
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.itemHeader h3 {
+    font-size: 16px;
+    font-weight: 600;
+    /* color: #F4F4F5; */
+    color: var(--text-primary);
+}
+
+/* #232325 */
+/* =========================
+   Tag + Dot
+========================= */
+
+.dot {
+    /* color: #8C8C96; */
+    color: var(--text-primary);
+}
+
+.tag {
+    font-size: 14px;
+    /* color: #8C8C96; */
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   Description
+========================= */
+
+.itemDescription {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #52525b;
+    white-space: pre-line;
+}
+
+
+/* =========================
+   Mobile Fix
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        margin-left: 0;
+    }
+
+    .workstationSection {
+        margin-left: 0;
+        padding-left: 20px;
+    }
+}
+
+
+
+.sectionsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+
+
+/* =========================
+   Development Tools Section
+========================= */
+
+.developmentToolsSection {
+
+    max-width: 720px;
+
+    margin-left: clamp(0px, 22vw, 420px);
+    margin-right: auto;
+    /* margin-top: -2.3rem; */
+    border-left: 1px solid #232325;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding-left: 32px;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+
+.developmentToolsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+
+    .developmentToolsGrid {
+        grid-template-columns: 140px 1fr;
+    }
+
+    .developmentToolsContent {
+        grid-column: 2;
+    }
+}
+
+
+/* =========================
+   Section Title
+========================= */
+
+.developmentToolsTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   List
+========================= */
+
+.developmentToolsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* =========================
+   Item
+========================= */
+
+.developmentToolsItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+}
+
+
+/* =========================
+   Item Header
+========================= */
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.itemHeader h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   Tag + Dot
+========================= */
+
+.dot {
+    color: var(--text-primary);
+}
+
+.tag {
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   Description
+========================= */
+
+.itemDescription {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #52525b;
+    white-space: pre-line;
+}
+
+
+/* =========================
+   Mobile Fix
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        margin-left: 0;
+    }
+
+    .developmentToolsSection {
+        margin-left: 0;
+        padding-left: 20px;
+    }
+}

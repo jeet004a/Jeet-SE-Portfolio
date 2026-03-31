@@ -1,0 +1,91 @@
+.footer {
+    margin-top: 120px;
+    padding: 40px 24px;
+    border-top: 1px solid;
+}
+
+
+/* Container */
+
+.inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Links */
+
+.links {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.links a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+
+/* Copyright */
+
+.copy {
+    font-size: 14px;
+}
+
+
+/* ---------------- LIGHT MODE ---------------- */
+
+:global(.theme.light) .footer {
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+:global(.theme.light) .links a {
+    color: #1f2937;
+}
+
+:global(.theme.light) .links a:hover {
+    color: #0d9488;
+}
+
+:global(.theme.light) .copy {
+    color: #6b7280;
+}
+
+
+/* ---------------- DARK MODE ---------------- */
+
+:global(.theme.dark) .footer {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.theme.dark) .links a {
+    color: #e5e7eb;
+}
+
+:global(.theme.dark) .links a:hover {
+    color: #2dd4bf;
+}
+
+:global(.theme.dark) .copy {
+    color: #71717a;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 768px) {
+    .inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}

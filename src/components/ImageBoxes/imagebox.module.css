@@ -1,0 +1,99 @@
+/* Container */
+
+.strip {
+    margin-top: -16px;
+    margin-bottom: -16px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+@media (min-width: 640px) {
+    .strip {
+        gap: 32px;
+    }
+}
+
+
+/* Card */
+
+.card {
+    position: relative;
+    flex: none;
+    width: 176px;
+    /* w-44 */
+    aspect-ratio: 9 / 10;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #f4f4f5;
+    /* zinc-100 */
+}
+
+@media (min-width: 640px) {
+    .card {
+        width: 288px;
+        /* w-72 */
+        border-radius: 16px;
+        /* rounded-2xl */
+    }
+}
+
+:global(.theme.dark) .card {
+    background-color: #27272a;
+    /* zinc-800 */
+}
+
+
+/* Rotations */
+
+.rotate2 {
+    transform: rotate(2deg);
+}
+
+.rotateNeg2 {
+    transform: rotate(-2deg);
+}
+
+
+/* Image */
+
+.image {
+    object-fit: cover;
+}
+
+
+/* Hover overlay */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+/* Show overlay only on hover for sm+ */
+
+@media (min-width: 640px) {
+    .card:hover .overlay {
+        opacity: 1;
+    }
+}
+
+
+/* Overlay text */
+
+.text {
+    z-index: 1;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #f4f4f5;
+}

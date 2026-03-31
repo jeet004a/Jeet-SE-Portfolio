@@ -1,0 +1,38 @@
+/* .spotlight {
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+    top: -25rem;
+    left: 0;
+    width: 40%;
+    height: 130%;
+    opacity: 0.8;
+} */
+
+.spotlight {
+    pointer-events: none;
+    position: absolute;
+    z-index: 0;
+    top: -35rem;
+    left: 0;
+    width: 40%;
+    height: 130%;
+    /* start hidden */
+    opacity: 0;
+    transform: scale(0.96);
+    /* animation */
+    animation: spotlightFadeIn 1.6s ease-out forwards;
+}
+
+@keyframes spotlightFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 0.8;
+        /* your original opacity */
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,347 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+    min-height: 100vh;
+    position: relative;
+    background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+[data-theme='dark'] .container {
+    background-image: radial-gradient(circle, #27272a 1px, transparent 1px);
+}
+
+.hero {
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.hero p {
+    color: #71717a;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+[data-theme='dark'] .hero p {
+    color: #a1a1aa;
+}
+
+[data-theme='dark'] .sectionTitle {
+    color: #fafafa;
+}
+
+[data-theme='dark'] .reasonItem,
+[data-theme='dark'] .techItem {
+    color: #d4d4d8;
+}
+
+[data-theme='dark'] .prefCard h3 {
+    color: #fafafa;
+}
+
+[data-theme='dark'] .prefCard p {
+    color: #a1a1aa;
+}
+
+.resumeBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(244, 244, 245, 0.5);
+    border: 1px solid #e4e4e7;
+    border-radius: 6px;
+    color: #3f3f46;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.resumeBtn:hover {
+    background: #f4f4f5;
+    border-color: #d4d4d8;
+}
+
+.sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.techGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.techCard {
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.techCard h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #27272a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.techList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.techItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #52525b;
+}
+
+.whyHire {
+    margin-bottom: 4rem;
+}
+
+.reasonList {
+    list-style: none;
+}
+
+.reasonItem {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    color: #52525b;
+    line-height: 1.6;
+}
+
+.arrow {
+    color: #a1a1aa;
+}
+
+.preferenceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.prefCard {
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.prefCard h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.prefCard p {
+    font-size: 0.875rem;
+    color: #71717a;
+}
+
+.radar {
+    margin-bottom: 4rem;
+}
+
+.logoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.logoItem {
+    filter: grayscale(1);
+    opacity: 0.5;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.logoItem:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.cta {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid #e4e4e7;
+}
+
+.hireBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #000;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: transform 0.2s;
+}
+
+.hireBtn:hover {
+    transform: scale(1.05);
+}
+
+[data-theme='dark'] .techCard,
+[data-theme='dark'] .prefCard {
+    background: #09090b;
+    border-color: #27272a;
+}
+
+[data-theme='dark'] .techCard h3,
+[data-theme='dark'] .hireBtn {
+    color: #fafafa;
+}
+
+[data-theme='dark'] .resumeBtn {
+    background: rgba(39, 39, 42, 0.5);
+    border-color: #27272a;
+    color: #d4d4d8;
+}
+
+[data-theme='dark'] .hireBtn {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding-top: 6rem;
+    }
+}
+
+
+
+
+
+
+/* Commented for Hero Section */
+
+/* ================= HERO ================= */
+
+.hero {
+    /* position: absolute; */
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ================= LEFT ================= */
+
+.heroleft {
+    min-width: 50%;
+}
+
+/* GSAP elements */
+:global(.elem) {
+    height: 9vw;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+:global(.elem) h1 {
+    /* position: absolute; */
+    top: 100%;
+    left: 0;
+    font-size: 11vw;
+    color: white;
+    font-family: "kajiro";
+    line-height: 0.9;
+    font-weight: 100;
+}
+
+:global(.elem) h1:nth-child(1) {
+    top: 0;
+}
+
+/* ================= BUTTON ================= */
+
+.button {
+    pointer-events: all;
+    cursor: pointer;
+    padding: 0.8vw 3vw;
+    font-size: 3vw;
+    margin-top: 2vw;
+    font-family: 'kajiro';
+    border: none;
+    background: white;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: black;
+    color: white;
+}
+
+/* ================= RIGHT ================= */
+
+.heroright {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 17%;
+    color: white;
+}
+
+.heroright p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+}
+
+/* ================= IMAGE BOX ================= */
+
+.imagediv {
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+.heroright p:nth-child(3) {
+    margin-bottom: 50px;
+}

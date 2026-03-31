@@ -1,0 +1,283 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid;
+}
+
+
+/* ---------- LIGHT MODE ---------- */
+
+:global(.theme.light) .card {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01));
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- DARK MODE ---------- */
+
+:global(.theme.dark) .card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ================= HEADER ================= */
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.card h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Header text colors */
+
+:global(.theme.light) .card h3 {
+    color: #111827;
+}
+
+:global(.theme.dark) .card h3 {
+    color: #f4f4f5;
+}
+
+
+/* ================= TEXT ================= */
+
+.description {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+:global(.theme.light) .description {
+    color: #4b5563;
+}
+
+:global(.theme.dark) .description {
+    color: #a1a1aa;
+}
+
+
+/* ================= SUBSCRIBE ================= */
+
+.subscribe {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 13px;
+}
+
+.subscribe button {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+
+/* Light mode inputs */
+
+:global(.theme.light) .subscribe input {
+    background: #ffffff;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+:global(.theme.light) .subscribe button {
+    background: #111827;
+    color: white;
+}
+
+:global(.theme.light) .subscribe button:hover {
+    background: #1f2937;
+}
+
+
+/* Dark mode inputs */
+
+:global(.theme.dark) .subscribe input {
+    background: #09090b;
+    border-color: #27272a;
+    color: white;
+}
+
+:global(.theme.dark) .subscribe button {
+    background: #27272a;
+    color: white;
+}
+
+:global(.theme.dark) .subscribe button:hover {
+    background: #3f3f46;
+}
+
+
+/* ================= WORK ================= */
+
+.hireLink {
+    font-size: 12px;
+    /* text-decoration: underline dotted; */
+    text-decoration: none;
+}
+
+:global(.theme.light) .hireLink {
+    color: #0d9488;
+}
+
+:global(.theme.dark) .hireLink {
+    color: #2dd4bf;
+}
+
+.workList {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.workItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* Logo */
+
+.logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+}
+
+:global(.theme.light) .logo {
+    background: #f4f4f5;
+}
+
+:global(.theme.dark) .logo {
+    background: #18181b;
+}
+
+
+/* Work info */
+
+.workInfo {
+    flex: 1;
+    font-size: 13px;
+}
+
+:global(.theme.light) .workInfo {
+    color: #111827;
+}
+
+:global(.theme.dark) .workInfo {
+    color: #f4f4f5;
+}
+
+.workInfo span {
+    display: block;
+    font-size: 12px;
+}
+
+:global(.theme.light) .workInfo span {
+    color: #6b7280;
+}
+
+:global(.theme.dark) .workInfo span {
+    color: #a1a1aa;
+}
+
+.workItem time {
+    font-size: 12px;
+}
+
+:global(.theme.light) .workItem time {
+    color: #6b7280;
+}
+
+:global(.theme.dark) .workItem time {
+    color: #71717a;
+}
+
+
+/* ================= RESUME ================= */
+
+.resumeBtn {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+
+/* Light */
+
+:global(.theme.light) .resumeBtn {
+    background: #f4f4f5;
+    color: #111827;
+}
+
+:global(.theme.light) .resumeBtn:hover {
+    background: #e5e7eb;
+}
+
+
+/* Dark */
+
+:global(.theme.dark) .resumeBtn {
+    background: #18181b;
+    color: white;
+}
+
+:global(.theme.dark) .resumeBtn:hover {
+    background: #27272a;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .sidebar {
+        gap: 24px;
+    }
+}

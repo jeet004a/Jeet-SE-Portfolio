@@ -1,0 +1,645 @@
+.mainContainer {
+    min-height: 100vh;
+    /* color: #18181b; */
+    color: var(--text-color);
+    /* padding: 120px 40px; */
+    padding: clamp(60px, 8vw, 120px) clamp(16px, 5vw, 40px);
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+
+.container {
+    max-width: 1100px;
+    margin: clamp(40px, 6vw, 150px) auto 0 auto;
+    padding: 0 1.5rem;
+    min-height: 197vh;
+    position: relative;
+    /* background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px); */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+:global(.theme.dark) .container::before {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+
+.heading {
+    font-size: 200px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    /* color: #18181b; */
+    color: var(--text-color)
+}
+
+.heading2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    /* color: #18181b; */
+    color: var(--text-color)
+}
+
+.text p {
+    /* color: #52525b; */
+    color: var(--subtext-color);
+    margin-bottom: 22px;
+    line-height: 1.9;
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 320px;
+}
+
+/* Download Button */
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    background: #f4f4f5;
+    color: #18181b;
+    border: 1px solid #e4e4e7;
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.downloadBtn:hover {
+    background: #e4e4e7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.downloadBtn:active {
+    opacity: 0.7;
+}
+
+/* Icon animation */
+.icon {
+    transition: transform 0.2s ease;
+}
+
+.downloadBtn:hover .icon {
+    transform: translateY(2px);
+}
+
+/* OR section */
+.orSection {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.orText {
+    font-size: 1rem;
+    color: #8c8c96;
+}
+
+.copyBtn {
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #52525b;
+    transition: color 0.2s ease;
+}
+
+.copyBtn:hover {
+    color: #18181b;
+    text-decoration: underline;
+}
+
+
+
+/* ================= DARK MODE ================= */
+
+:global(html.dark) .downloadBtn {
+    background: rgba(39, 39, 42, 0.6);
+    border: 1px solid #3f3f46;
+    color: #f4f4f5;
+}
+
+:global(html.dark) .downloadBtn:hover {
+    background: #3f3f46;
+}
+
+:global(html.dark) .orText {
+    color: #a1a1aa;
+}
+
+:global(html.dark) .copyBtn {
+    color: #a1a1aa;
+}
+
+:global(html.dark) .copyBtn:hover {
+    color: #ffffff;
+}
+
+
+/* Jack */
+
+.techContainer {
+    margin-top: 60px;
+    display: flex;
+
+}
+
+
+.techWrapper {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    width: 100%;
+
+}
+
+.techContainer h2 {
+    color: var(--text-color)
+}
+
+/* .theme.dark .techContainer h2 {
+    color: #ffffff;
+} */
+
+.techWrapper_1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    gap: 10px;
+}
+
+
+
+/* #474749 */
+
+/* Mailto Logo css */
+
+.hireBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+
+    border: 2px solid #18181b;
+    background: #18181b;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.hireBtn:hover {
+    transform: translateY(-2px);
+    background: #000;
+}
+
+.icon {
+    width: 22px;
+    height: 32px;
+    color: #595454;
+    cursor: pointer;
+}
+
+.iconBg {
+    fill: #18181b;
+}
+
+.iconCircle {
+    fill: #e53935;
+}
+
+.now {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.play {
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* ================= DARK MODE ================= */
+
+:global(.theme.dark) .hireBtn {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #ffffff;
+}
+
+:global(.theme.dark) .hireBtn:hover {
+    background: #e4e4e7;
+}
+
+:global(.theme.dark) .iconBg {
+    fill: #ffffff;
+}
+
+
+/* Main tech section */
+
+.techWrapperContainer {
+    /* display: flex;
+
+    flex-direction: column; */
+}
+
+.box_wrapper {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    flex: 1 1 300px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #e4e4e7;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #27272a;
+}
+
+.list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.listItem {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: #f4f4f5;
+    color: #3f3f46;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+.listItem:hover {
+    background: #61DAFB;
+    cursor: pointer;
+}
+
+.techIcon {
+    cursor: pointer;
+}
+
+/* ================= DARK MODE ================= */
+
+:global(.theme.dark) .card {
+    background: #111111;
+    border: 1px solid #2a2a2a;
+}
+
+:global(.theme.dark) .heading {
+    color: #ffffff;
+}
+
+:global(.theme.dark) .listItem {
+    background: #1f1f1f;
+    color: #d4d4d8;
+}
+
+:global(.theme.dark) .listItem:hover {
+    background: #2a2a2a;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.hiremeSection {
+    margin-top: 4rem;
+
+}
+
+/* Heading */
+/* .heading {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+} */
+
+/* Item wrapper */
+.hiremeItem {
+    margin-top: 1.2rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 28px;
+    transition: transform 0.3s ease;
+}
+
+/* Icon */
+.hiremeIcon {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    color: var(--subtext-color);
+    transition: all 0.3s ease;
+}
+
+/* Paragraph */
+.hiremeText {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    color: #8c8c96;
+    /* var(--subtext-color); */
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.hiremeItem:hover .hiremeIcon {
+    transform: translateX(4px) rotate(6deg);
+    color: #22c55e;
+    /* green */
+}
+
+.hiremeItem:hover .hiremeText {
+    color: #9b9bd0
+        /* var(--text-color); */
+}
+
+
+
+/* My Preferences Section CSS */
+
+.preferenceSection {
+    margin-top: 4rem;
+}
+
+/* Heading */
+.heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Card */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Title Row */
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Icon */
+.icon {
+    width: 16px;
+    height: 16px;
+    color: var(--subtext-color);
+    transition: all 0.3s ease;
+}
+
+/* Title */
+.title {
+    font-size: 1rem;
+    color: var(--subtext-color);
+    transition: color 0.3s ease;
+}
+
+/* Description */
+.description {
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #8c8c96
+        /* var(--subtext-color); */
+}
+
+/* Hover Effects */
+.card:hover .icon {
+    transform: translateX(4px) rotate(6deg);
+    color: #22c55e;
+    /* green */
+}
+
+.card:hover .title {
+    color: var(--text-color);
+}
+
+
+
+
+/* Raddar Section */
+
+
+.radderCardSection {
+    margin-top: 4rem;
+}
+
+.radderCardHeading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.radderCardSubtext {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #8c8c96;
+    /* var(--subtext-color); */
+}
+
+/* Grid */
+.radderCardGrid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 640px) {
+    .radderCardGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Card */
+.radderCardItem {
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.radderCardItem:hover {
+    transform: translateY(-4px);
+}
+
+/* Logo */
+.radderCardLogo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--subtext-color);
+    transition: 0.3s ease;
+}
+
+/* Company Name */
+.radderCardCompanyName {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--subtext-color);
+}
+
+/* Overlay */
+.radderCardOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.75rem;
+    text-align: center;
+
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transition: all 0.3s ease;
+}
+
+
+
+/* Hover Effect */
+.radderCardItem:hover .radderCardOverlay {
+    opacity: 1;
+    backdrop-filter: blur(2px);
+}
+
+.radderCardItem:hover .radderCardLogo {
+    opacity: 0.2;
+}
+
+.radderCardOverlay a {
+    color: #22c55e;
+    text-decoration: underline;
+}
+
+.radderCardOverlay p {
+    color: var(--text-color);
+}
+
+/* Offer CTA */
+
+.radderCardCtaWrapper {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .radderCardCtaWrapper {
+        margin-top: 8rem;
+    }
+}
+
+/* Text */
+.radderCardCtaText {
+    font-size: 1rem;
+    color: var(--subtext-color);
+    opacity: 0.3;
+
+    user-select: none;
+
+    transition: all 1s ease;
+}
+
+/* Hover Effect */
+.radderCardCtaText:hover {
+    transform: rotate(6deg);
+    opacity: 1;
+}

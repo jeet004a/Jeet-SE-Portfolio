@@ -1,0 +1,269 @@
+/* ===============================
+   LIGHT MODE (Default)
+================================= */
+
+.main {
+    background: #ffffff;
+    min-height: 100vh;
+    color: #18181b;
+    padding: 120px 40px;
+    position: relative;
+    /* overflow-x: hidden; */
+}
+
+
+/* Dot background (light mode) */
+
+.main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px); */
+    background-size: 20px 20px;
+    z-index: 0;
+}
+
+.container {
+    /* margin-top: 20%; */
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px); */
+    gap: 80px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+}
+
+.left {
+    max-width: 650px;
+}
+
+.heading {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #18181b;
+}
+
+.text p {
+    color: #52525b;
+    margin-bottom: 22px;
+    line-height: 1.9;
+}
+
+.link {
+    border-bottom: 1px dotted #888;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: #14b8a6;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* Image */
+
+.imageCard {
+    border-radius: 20px;
+    overflow: hidden;
+    transform: rotate(3deg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+}
+
+.profileImage {
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+/* ===============================
+   SOCIAL
+================================= */
+
+.social {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.socialItem {
+    margin-bottom: 18px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: #3f3f46;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.socialLink:hover {
+    color: #14b8a6;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: #71717a;
+    transition: 0.3s ease;
+}
+
+.socialLink:hover .icon {
+    fill: #14b8a6;
+}
+
+.divider {
+    height: 1px;
+    background: #e4e4e7;
+    margin: 30px 0;
+}
+
+.email {
+    color: #3f3f46;
+}
+
+
+/* ===============================
+   DARK MODE
+================================= */
+
+:global(.theme.dark) .main {
+    background: #0a0a0a;
+    color: #e5e5e5;
+}
+
+/* Dot for full page */
+:global(.theme.dark) .main::before {
+    /* background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px); */
+}
+
+:global(.theme.dark) .container::before {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+
+:global(.theme.dark) .heading {
+    color: #f4f4f5;
+}
+
+:global(.theme.dark) .text p {
+    color: #a1a1aa;
+}
+
+:global(.theme.dark) .imageCard {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+:global(.theme.dark) .socialLink {
+    color: #cfcfcf;
+}
+
+:global(.theme.dark) .icon {
+    fill: #71717a;
+}
+
+:global(.theme.dark) .divider {
+    background: #2a2a2a;
+}
+
+:global(.theme.dark) .email {
+    color: #cfcfcf;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .right {
+        align-items: center;
+    }
+}
+
+
+/* ===============================
+   HAND WAVE
+================================= */
+
+.wave {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: waveAnimation 1.2s ease-in-out 1;
+}
+
+.wave:hover {
+    animation: waveAnimation 1.2s ease-in-out;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(12deg);
+    }
+
+    30% {
+        transform: rotate(-6deg);
+    }
+
+    45% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(6deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.spotlightWrapper {
+    display: block;
+}
+
+@media (max-width: 1600px) {
+    .spotlightWrapper {
+        display: none;
+    }
+}

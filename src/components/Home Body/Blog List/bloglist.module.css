@@ -1,0 +1,98 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.card {
+    max-width: 640px;
+}
+
+
+/* ---------- META ---------- */
+
+.meta {
+    font-size: 13px;
+}
+
+
+/* ---------- TITLE ---------- */
+
+.title {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* ---------- EXCERPT ---------- */
+
+.excerpt {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+
+/* ---------- READ MORE ---------- */
+
+.readMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+
+/* ================= LIGHT MODE ================= */
+
+:global(.theme.light) .meta {
+    color: #6b7280;
+    /* gray-500 */
+}
+
+:global(.theme.light) .title {
+    color: #111827;
+    /* gray-900 */
+}
+
+:global(.theme.light) .excerpt {
+    color: #4b5563;
+    /* gray-600 */
+}
+
+:global(.theme.light) .readMore {
+    color: #0d9488;
+    /* teal-600 */
+}
+
+:global(.theme.light) .readMore:hover {
+    color: #0f766e;
+    /* teal-700 */
+}
+
+
+/* ================= DARK MODE ================= */
+
+:global(.theme.dark) .meta {
+    color: #a1a1aa;
+}
+
+:global(.theme.dark) .title {
+    color: #f4f4f5;
+}
+
+:global(.theme.dark) .excerpt {
+    color: #a1a1aa;
+}
+
+:global(.theme.dark) .readMore {
+    color: #2dd4bf;
+}
+
+:global(.theme.dark) .readMore:hover {
+    color: #5eead4;
+}
