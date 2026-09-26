@@ -23,16 +23,16 @@ const posts = [
       'TL;DR Four layers move every byte on the internet. Here is what each one actually does...',
     ref: "https://techeng-omega.vercel.app/post/tcp-ip-model-explained"
   },
-  // {
-  //   date: 'Feb 27, 2023',
-  //   read: '3 min read',
-  //   views: '4.4k views',
-  //   title:
-  //     'A Step-by-Step Guide to Share images from Your Expo React Native App',
-  //   excerpt:
-  //     "Let's get started with this step-by-step guide to share images...",
-  //   ref: "https://techeng-omega.vercel.app/post/memory-in-ai-agents"
-  // },
+  {
+    date: 'Sept 04, 2026',
+    read: '13 min read',
+    views: '4.4k views',
+    title:
+      'Netflix System Design',
+    excerpt:
+      "A step-by-step guide to designing a highly scalable, reliable, and low-latency Netflix-like streaming system.",
+    ref: "https://techeng-omega.vercel.app/post/netflix-system-design"
+  },
 ];
 
 const Bloglist = () => {

@@ -54,11 +54,13 @@ const Navbar = () => {
 
     return (
         <>
+
             <div className={`${styles.container} ${navHidden ? styles.containerHidden : ''}`}>
                 {pathname != '/' && <div className={styles.logo}>
                     <Link href="/" aria-label="Home">
                         <Image
                             src="https://avatars.githubusercontent.com/u/60826412?v=4&size=64"
+                            // src="/Jeet_Img.jpeg"
                             alt="Jeet Wasti Profile photo"
                             width={36}
                             height={36}

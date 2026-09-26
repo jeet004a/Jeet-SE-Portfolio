@@ -9,7 +9,7 @@ const HomeLayout = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.grid}>
-        <Bloglist/>
+        <Bloglist />
         <Sidebar />
       </div>
     </section>

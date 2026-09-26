@@ -7,6 +7,13 @@ import styles from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/footer/Footer'
+import RandomProfileImage from '@/components/RandomProfileImage/RandomProfileImage'
+// import React, { useContext, useEffect, useRef, useState } from 'react'
+
+const images = [
+  "/Jeet_3.jpg",
+  "/Jeet_2026.jpeg"
+];
 
 export const metadata = {
   title: "About - Jeet Wasti",
@@ -14,6 +21,10 @@ export const metadata = {
 
 
 const About = () => {
+  // const [image, setImage] = useState(() => {
+  //   return images[Math.floor(Math.random() * images.length)];
+  // });
+
   return (
     <main className={styles.main}>
 
@@ -84,15 +95,19 @@ const About = () => {
 
           {/* Image Card */}
           <div className={styles.imageCard}>
-            <Image
+            {/* <Image
               // src="https://media.licdn.com/dms/image/v2/D5603AQEJ9NB-w1YmXw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1730827543441?e=1776297600&v=beta&t=KTXY73_gRe772kCR1yX6tgR0hS-ehKq6S-FQc3NPeBg"
               src="/Jeet_2026.jpeg"
+              // src="/Jeet_img.jpeg"
+              // src="/Jeet_3.jpg"
+              // src={image}
               alt="Jeet Profile Image"
               width={400}
               height={500}
               priority
               className={styles.profileImage}
-            />
+            /> */}
+            <RandomProfileImage />
           </div>
 
           {/* Social Section */}
